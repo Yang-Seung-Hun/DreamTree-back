@@ -1,10 +1,19 @@
+server:
+  port: 8080  # Spring boot Server port
+
 spring:
+  h2:
+    console:
+      enabled: true  # H2 웹 콘솔을 사용하겠다는 의미
+      path: /testdb
+
   datasource:
-    url: "jdbc:mysql://localhost:3306/dreamTree"
-#    url: "jdbc:mysql://springboot-db.coahhlorbmh0.ap-northeast-2.rds.amazonaws.com:3306/myblog"
-    username: simononze
-    password: fqvi7469!
-    driver-class-name: com.mysql.cj.jdbc.Driver
+    driver-class-name: org.h2.Driver  #h2 드라이버 설정
+    url: jdbc:h2:mem:testdb  #접속 URL
+    username: sa  # 사용자 이름 (로그인 시 사용)
+    password:  # 사용자 암호 (로그인 시 사용)# 콘솔의 경로
+
+
   jpa:
     hibernate:
       ddl-auto: create
