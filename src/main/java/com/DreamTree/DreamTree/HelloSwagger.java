@@ -18,4 +18,9 @@ public class HelloSwagger {
         return hello.getHello() + hello.getName();
     }
 
+    @PostMapping("/hello-git")
+    public String helloGit(@RequestBody Hello hello){
+        return hello.getHello()+hello.getName();
+    }
+
 }
