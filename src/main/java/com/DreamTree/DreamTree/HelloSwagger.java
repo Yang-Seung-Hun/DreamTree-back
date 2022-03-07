@@ -28,4 +28,9 @@ public class HelloSwagger {
         return hello.getHello()+hello.getName();
     }
 
+    @PostMapping("/hey-github2")
+    public String heyGithub2(@RequestBody Hello hello) {
+        return hello.getHello()+hello.getName();
+    }
+
 }
